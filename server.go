@@ -1,7 +1,8 @@
 package main
 
 import (
-	"controller"
+	"modules/setting"
+	"routers"
 
 	"gopkg.in/macaron.v1"
 )
@@ -12,7 +13,9 @@ func main() {
 	m.Use(macaron.Renderer())
 	m.Use(macaron.Static("public"))
 
-	m.Get("/", controller.HomeController)
+	m.Group("", func() {
+		m.Get("/", routers.ViewHomePage)
+	})
 
-	m.Run()
+	m.Run(setting.HTTPPort)
 }
