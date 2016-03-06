@@ -97,7 +97,9 @@ body{
 			display: none;
 		}
 }
-
+.btn{
+	margin-top: 3em;
+}
 @media (min-width: 479px) and (max-width: 526px) {
 		.whtie{
 			background-color: #fff;
@@ -143,6 +145,10 @@ body{
 }
 .containt div{
 	text-align: center;
+	color:#fff;
+}
+.containt_div{
+	height: 19em;
 }
 .footera{
 	 margin-top: 2em;
